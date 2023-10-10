@@ -1,8 +1,3 @@
-# React + Vite
+Travel Advisor App that tells the user what restaurants, hotels, and attractions are around them. These are all also displayed on a map, and can be filetered by rating. The user can also search for different locations that will give them all the information around those locations. 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![image](https://github.com/reactIsWhack/travel-advisor/assets/142702296/338f27e3-a0c1-40c3-b2ff-4146bcae33cb)
