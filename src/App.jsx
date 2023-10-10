@@ -68,11 +68,11 @@ export default function App() {
         restaurantsWithoutPhotos.forEach(restaurant => {
           restaurant.photo = {images: {original: {url: 'https://www.foodserviceandhospitality.com/wp-content/uploads/2016/09/Restaurant-Placeholder-001.jpg'}}}
         })
+        informationAllRatings.current = [...restaurantsWithPhotos, ...restaurantsWithoutPhotos]
         setInformation([...restaurantsWithPhotos, ...restaurantsWithoutPhotos]);
       })
-      if (!formData.rating) {
-        informationAllRatings.current = information
-      }
+
+      console.log(informationAllRatings.current)
 
       if (userInputLocation) {
       console.log('ran2')
@@ -88,6 +88,7 @@ export default function App() {
    
   }, [userLocation.lat, userLocation.long, formData.info, userInputLocation]);
 
+  console.log(informationAllRatings, 'ref');
   useEffect(() => {
     if (Number(formData.rating) === 4.5) {
       setInformation(prevInformation => {
