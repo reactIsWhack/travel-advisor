@@ -16,6 +16,7 @@ export default function App() {
   const informationAllRatings = useRef([]);
   const success = (position) => {
     console.log(position)
+    console.log('ran2')
     setUserLocation(() => (
       {
         lat: position.coords.latitude,
@@ -28,15 +29,14 @@ export default function App() {
     alert('Unable to retrieve your location')
   }
 
-  function getInformation() {
-    
-      // when the page loads information with ratings 1-5 will be in this array
-  }
+  console.log(userLocation)
 
     //get users location
     navigator.geolocation.getCurrentPosition(success, error);
+  
 
   useEffect(() => {
+
     console.log('ran');
     //using users location find 20 restaurants around them
     let url = '';
@@ -57,10 +57,9 @@ export default function App() {
       }
     };
     fetch(url, options)
-      .then(response => {
-        response.json()
-      })
+      .then(response => response.json())
       .then(data => {
+        console.log(data);
         const filteredData = data.data.filter(info => !info.ad_position);
         const correctedData = filteredData.filter(info => info.name !== 'duplicate');
         // Adds a placeholder image to restaurants without photos
@@ -74,12 +73,8 @@ export default function App() {
       if (!formData.rating) {
         informationAllRatings.current = information
       }
-   
-  }, [userLocation, formData.info]);
 
-  useEffect(() => {
-        // Gets the lat and lng of the location the user input
-    if (userInputLocation) {
+      if (userInputLocation) {
       console.log('ran2')
       const url = `https://maps.googleapis.com/maps/api/geocode/json?address=${userInputLocation}&key=AIzaSyCXBnhFwhjuCI_1ORkaM6uDx9awEpxfUoI`;
       fetch(url)
@@ -90,7 +85,8 @@ export default function App() {
         })))
         .catch(error => alert(error))
     }
-  }, [userInputLocation])
+   
+  }, [userLocation.lat, userLocation.long, formData.info, userInputLocation]);
 
   useEffect(() => {
     if (Number(formData.rating) === 4.5) {
