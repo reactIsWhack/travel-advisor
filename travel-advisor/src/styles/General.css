@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: inter
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  height: 64px;
+  background-color: #3f51b5;
+  padding: 0 24px;
+  justify-content: space-between;
+  color: white;
+  box-shadow: 0 4px 4px -1px rgba(0, 0, 0, 0.4);
+  margin-bottom: 23px;
+}
+
+.app {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+div::-webkit-scrollbar{
+  width: 0 !important
+}
+.gm-style .gm-style-iw-c {
+  padding: 0
+}

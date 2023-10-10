@@ -1,0 +1,58 @@
+.map-container {
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+
+.map {
+  height: 100%;
+}
+
+.card {
+  width: 120px; 
+  padding-top: 6px;
+}
+
+.gm-style .gm-style-iw {
+  position: absolute;
+  transition: 2s;
+}
+
+.gm-style .gm-style-iw:hover {
+  z-index: 100 !important;
+}
+
+.card-title {
+  font-size: 0.875rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 500;
+  line-height: 1.57;
+  letter-spacing: 0.00714em;
+  max-width: 90%;
+  text-align: left;
+  padding-left: 10px
+}
+
+.card-image {
+  height: 150px;
+  width: 100px;
+  object-fit: cover;
+}
+
+.card-img-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-stars {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.gm-ui-hover-effect {
+  opacity: 0;
+}
+
+.gm-ui-hover-effect:hover {
+  opacity: 0;
+}
